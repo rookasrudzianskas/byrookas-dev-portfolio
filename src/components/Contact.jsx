@@ -9,6 +9,10 @@ import emailjs from "@emailjs/browser";
 import { SectionWrapper } from "../hoc";
 import EarthCanvas from "./canvas/Earth.jsx";
 
+
+// template_cgdacbp
+// service_trccrd8
+// 706SG0Me2VC3isOvJ
 const Contact = ({}) => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -33,7 +37,33 @@ const Contact = ({}) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.send()
+    emailjs.send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: "Rokas Rudzianskas",
+        from_email: form.email,
+        to_email: "hello.rokastech@gmail.com",
+        message: form.message,
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    ).then((res) => {
+      setLoading(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    },
+      (error) => {
+        setLoading(false);
+        console.error(error);
+
+        alert("Ahh, something went wrong. Please try again.");
+      })
   }
 
 
