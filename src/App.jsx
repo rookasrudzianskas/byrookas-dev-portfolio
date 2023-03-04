@@ -7,7 +7,7 @@ import Tech from "./components/Tech.jsx";
 import Works from "./components/Works.jsx";
 import Feedbacks from "./components/Feedbacks.jsx";
 import Contact from "./components/Contact.jsx";
-import StarsCanvas from "./components/StarsCanvas.jsx";
+import {StarsCanvas} from "./components/canvas/index.js";
 
 const App = () => {
   return (

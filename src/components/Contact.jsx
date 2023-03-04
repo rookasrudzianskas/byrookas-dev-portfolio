@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {slideIn} from "../utils/motion.js";
 import {styles} from "../styles.js";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 // import { styles } from "../styles";
 // import { EarthCanvas } from "./canvas";
@@ -30,7 +30,10 @@ const Contact = ({}) => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
+    emailjs.send()
   }
 
 
