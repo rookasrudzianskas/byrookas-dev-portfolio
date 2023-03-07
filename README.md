@@ -1,6 +1,6 @@
 ## Three JS Portfolio Development with React Three Fiber and Tailwind CSS
 
-Live version is in here - [Rokas Rudzianskas.com](https://www.rokasrudzianskas.com/)
+Live version is in here - [Rokas Rudzianskas.com](https://www.rokasrudzianskas.com/) ❤
 
 - ThreeJS - a powerful 3D graphics library for rendering and animating the 3D model
 - React Three Fiber - a popular library for creating 3D graphics with ThreeJS in React
